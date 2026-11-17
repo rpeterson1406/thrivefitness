@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THRIVE Women Fitness — three homepage concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Fraunces:opsz,wght@9..144,560&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ece8e2;
+      color: #1c1b19;
+      font-family: Outfit, sans-serif;
+    }
+    header {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 36px 0 8px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 560;
+      font-size: clamp(36px, 4vw, 52px);
+      letter-spacing: -0.03em;
+    }
+    header p { margin: 8px 0 0; max-width: 40rem; color: #4e4a45; line-height: 1.5; }
+    .grid {
+      width: min(1180px, calc(100% - 40px));
+      margin: 28px auto 48px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    a.card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      background: #f7f4ef;
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 100%;
+    }
+    a.card:hover { outline: 2px solid #1c1b19; }
+    .shot {
+      height: 480px;
+      overflow: hidden;
+      background: #ddd;
+      border-bottom: 1px solid #e4ded6;
+    }
+    .shot iframe {
+      width: 1440px;
+      height: 1700px;
+      border: 0;
+      transform: scale(0.38);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .meta { padding: 16px 16px 18px; }
+    .meta span {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8e3d52;
+      font-weight: 600;
+    }
+    .meta h2 { margin: 4px 0 6px; font-size: 22px; }
+    .meta p { margin: 0; color: #4e4a45; font-size: 14.5px; line-height: 1.45; }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .shot iframe { transform: scale(0.5); }
+      .shot { height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Homepage concepts</h1>
+    <p>Concepts 4 and 5 combine the editorial look with the journal’s readable layout. Same words as the live site. Only the top half, through the four health topics.</p>
+  </header>
+  <main class="grid">
+    <a class="card" href="04-portrait.html">
+      <div class="shot"><iframe src="04-portrait.html" tabindex="-1" title="Portrait preview"></iframe></div>
+      <div class="meta">
+        <span>Concept 4</span>
+        <h2>Portrait</h2>
+        <p>Editorial type and color, with her full introduction beside the photo and the health topics as a readable list.</p>
+      </div>
+    </a>
+    <a class="card" href="05-spread.html">
+      <div class="shot"><iframe src="05-spread.html" tabindex="-1" title="Spread preview"></iframe></div>
+      <div class="meta">
+        <span>Concept 5</span>
+        <h2>Spread</h2>
+        <p>Same palette, set like a magazine spread. A shorter photo, then the promise and the four health topics as the main content.</p>
+      </div>
+    </a>
+    <a class="card" href="01-editorial.html">
+      <div class="shot"><iframe src="01-editorial.html" tabindex="-1" title="Editorial preview"></iframe></div>
+      <div class="meta">
+        <span>Concept 1</span>
+        <h2>Editorial</h2>
+        <p>Closest to the retreats site. Cream page, forest serif headlines, pink script, and a full-width training photo.</p>
+      </div>
+    </a>
+    <a class="card" href="02-studio.html">
+      <div class="shot"><iframe src="02-studio.html" tabindex="-1" title="Studio preview"></iframe></div>
+      <div class="meta">
+        <span>Concept 2</span>
+        <h2>Studio</h2>
+        <p>Dark hero with Shannon beside the headline, then the hot-pink benefits band redrawn as four cards.</p>
+      </div>
+    </a>
+    <a class="card" href="03-journal.html">
+      <div class="shot"><iframe src="03-journal.html" tabindex="-1" title="Journal preview"></iframe></div>
+      <div class="meta">
+        <span>Concept 3</span>
+        <h2>Journal</h2>
+        <p>A quieter magazine page. Warm paper, a tall portrait, and the health topics set in rows.</p>
+      </div>
+    </a>
+  </main>
+</body>
+</html>

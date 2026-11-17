@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept 1 — Editorial | THRIVE Women Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1f1f1f;
+      --forest: #3e4a34;
+      --pink: #d81b60;
+      --cream: #fdf8f3;
+      --cream-deep: #f4efe8;
+      --muted: #5e5a55;
+      --body: #2f2f2f;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--body);
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    .nav {
+      position: absolute;
+      top: 52px;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      padding: 28px 32px 0;
+    }
+    .nav a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+    .nav a[aria-current="page"],
+    .nav a:hover { border-bottom-color: var(--pink); color: var(--pink); }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      background: #e6e4e1 url("images/gym.jpg") right center / cover no-repeat;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(253, 248, 243, 0.94) 0%,
+        rgba(253, 248, 243, 0.88) 34%,
+        rgba(253, 248, 243, 0.42) 56%,
+        rgba(253, 248, 243, 0.05) 74%,
+        rgba(253, 248, 243, 0) 100%);
+    }
+    .hero-inner {
+      position: relative;
+      width: min(1180px, calc(100% - 80px));
+      margin: 0 auto;
+    }
+    .hero-copy { max-width: 640px; }
+
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(52px, 6.4vw, 86px);
+      line-height: 0.92;
+      letter-spacing: 0.01em;
+      color: var(--forest);
+    }
+    .script {
+      margin: 8px 0 0;
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(52px, 6vw, 78px);
+      line-height: 1;
+      color: var(--pink);
+      font-weight: 400;
+    }
+    .sub {
+      margin: 22px 0 0;
+      max-width: 28rem;
+    }
+    .sub span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .sub strong {
+      display: block;
+      margin-top: 6px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(24px, 2.5vw, 30px);
+      white-space: nowrap;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+    .lead {
+      margin: 28px 0 0;
+      max-width: 38rem;
+      font-size: 15.5px;
+      line-height: 1.75;
+      color: #2c2c2c;
+    }
+
+    .statement {
+      padding: 88px 0 40px;
+    }
+    .wrap {
+      width: min(1180px, calc(100% - 80px));
+      margin: 0 auto;
+    }
+    .statement h2 {
+      margin: 0;
+      max-width: 16ch;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1.05;
+      color: var(--pink);
+    }
+    .prose {
+      max-width: 42rem;
+      margin: 28px 0 0;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .prose p { margin: 0 0 1.15em; }
+    .rule {
+      width: 72px;
+      height: 2px;
+      background: var(--pink);
+      margin: 28px 0 0;
+    }
+
+    .health {
+      padding: 56px 0 120px;
+    }
+    .health h2 {
+      margin: 0 0 36px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      color: var(--forest);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .cards article {
+      padding-top: 18px;
+      border-top: 2px solid var(--forest);
+    }
+    .cards h3 {
+      margin: 0 0 12px;
+      font-family: Montserrat, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .cards p {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3a3836;
+    }
+    .cards p + p { margin-top: 10px; }
+    .cards .news {
+      display: inline;
+      color: var(--pink);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .chooser {
+      position: relative;
+      z-index: 30;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      background: #141414;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+    }
+    .chooser span { opacity: 0.7; margin-right: 6px; }
+    .chooser a {
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 11px;
+      border-radius: 999px;
+    }
+    .chooser a[aria-current="page"] { background: #fff; color: #141414; }
+    .chooser a:hover { background: rgba(255,255,255,0.14); }
+    .chooser a[aria-current="page"]:hover { background: #fff; }
+
+    @media (max-width: 980px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+      .hero { background-position: 70% center; }
+      .hero::before {
+        background: linear-gradient(180deg, rgba(253,248,243,0.55) 0%, rgba(253,248,243,0.92) 42%, rgba(253,248,243,0.96) 100%);
+      }
+    }
+    @media (max-width: 720px) {
+      .nav {
+        position: static;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+        justify-content: flex-start;
+        padding: 16px 20px 8px;
+        background: var(--cream);
+      }
+      .hero {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 0 36px;
+        background: var(--cream);
+      }
+      .hero::before {
+        position: relative;
+        inset: auto;
+        height: 320px;
+        background: url("images/gym.jpg") 68% 20% / cover no-repeat;
+      }
+      .hero-inner, .wrap { width: calc(100% - 40px); }
+      .hero-inner { padding-top: 22px; }
+      .cards { grid-template-columns: 1fr; }
+      .sub strong { white-space: normal; }
+      .chooser { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="chooser" aria-label="Design concepts">
+    <span>First half</span>
+    <a href="01-editorial.html" aria-current="page">1 Editorial</a>
+    <a href="02-studio.html">2 Studio</a>
+    <a href="03-journal.html">3 Journal</a>
+    <a href="04-portrait.html">4 Portrait</a>
+    <a href="05-spread.html">5 Spread</a>
+    <a href="index.html">All</a>
+  </nav>
+  <header class="nav">
+    <a href="https://www.thrivewomenfitness.com/" aria-current="page">Home</a>
+    <a href="https://www.thrivewomenfitness.com/about">About</a>
+    <a href="https://www.thrivewomenfitness.com/women-s-hiking-retreats">Women's Hiking Retreats</a>
+    <a href="https://www.thrivewomenfitness.com/testimonials">Testimonials</a>
+    <a href="https://www.thrivewomenfitness.com/podcasts">Podcasts</a>
+    <a href="https://www.thrivewomenfitness.com/hike-retreat-photo-gallery">Photo Gallery</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>THRIVE Women Fitness</h1>
+        <p class="script">Shannon Peterson</p>
+        <p class="sub">
+          <span>Specialized coaching for</span>
+          <strong>Perimenopause thru Post-Menopause</strong>
+        </p>
+        <p class="lead">Hi! I'm Shannon, your perimenopause/post-menopausal Master Personal Trainer. For over 30 years, I've trained thousands of women just like you -- struggling with unwanted weight gain, fatigue, demotivation and loss of self-confidence that often starts in midlife and continues throughout the decades. And at age 54, I've personally experienced it. Women are told "that's just the way it is now", and lose hope. Wrong!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <h2>THRIVING HAS NO AGE LIMIT</h2>
+      <div class="rule"></div>
+      <div class="prose">
+        <p>I guarantee you CAN improve body composition, lose fat, build bone density, gain lean muscle, and feel more like you again! As a 3x Ironman World Championship finisher, I know it takes more than just a cookie cutter exercise program to get results. It takes scientifically proven strategic implementation designed to optimize your</p>
+        <p>THRIVE fitness clients learn a wholistic way of training, eating, and thinking to enhance your hormonal health.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="health">
+    <div class="wrap">
+      <h2>EXERCISE: #1 impact on overall health</h2>
+      <div class="cards">
+        <article>
+          <h3>MUSCLE &amp; METABOLISM</h3>
+          <p>Women start losing muscle at age 30. By age 70, we have 35% less muscle.</p>
+          <p><span class="news">GOOD NEWS:</span> You can decrease muscle loss by 8% per decade. That increases metabolism &amp; gives you a leaner physique.</p>
+        </article>
+        <article>
+          <h3>BONE HEALTH</h3>
+          <p>Women start losing bone density at age 35. As much as 45% loss by age 85.</p>
+          <p><span class="news">GOOD NEWS:</span> Not only can you decrease future bone loss, you can still BUILD bone in menopause.</p>
+        </article>
+        <article>
+          <h3>DISEASE PREVENTION</h3>
+          <p>Heart Disease, Metabolic Disease &amp; Diabetes risk all go up after menopause.</p>
+          <p><span class="news">GOOD NEWS:</span> You can decrease risk of Cardiovascular Heart Disease by 40-70% &amp; Diabetes by 40%</p>
+        </article>
+        <article>
+          <h3>BRAIN HEALTH</h3>
+          <p>Depression, Brain Fog, and Irritability are all factors of hormonal changes.</p>
+          <p><span class="news">GOOD NEWS:</span> Brain-Body neural connections improve and so does your memory, mood, anxiety &amp; depression.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    if (window.self !== window.top) document.documentElement.classList.add("framed");
+  </script>
+  <style>.framed .chooser { display: none; }</style>
+</body>
+</html>

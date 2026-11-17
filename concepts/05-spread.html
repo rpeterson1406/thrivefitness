@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept 5 — Spread | THRIVE Women Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1f1f1f;
+      --forest: #3e4a34;
+      --pink: #d81b60;
+      --cream: #fdf8f3;
+      --panel: #f3eee6;
+      --line: #e3dbd1;
+      --body: #2c2c2c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--body);
+      font-family: Montserrat, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.7;
+    }
+    img { display: block; max-width: none; }
+    a { color: inherit; }
+
+    .chooser {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 8px 12px;
+      background: #141414;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+    }
+    .chooser span { opacity: 0.7; margin-right: 6px; }
+    .chooser a {
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+    .chooser a[aria-current="page"] { background: #fff; color: #141414; }
+    .chooser a:hover { background: rgba(255,255,255,0.14); }
+    .chooser a[aria-current="page"]:hover { background: #fff; }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      padding: 22px 24px 18px;
+    }
+    .nav a {
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+    .nav a[aria-current="page"],
+    .nav a:hover { color: var(--pink); border-bottom-color: var(--pink); }
+
+    .open {
+      width: min(1120px, calc(100% - 64px));
+      margin: 0 auto;
+      padding: 8px 0 10px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 48px;
+      align-items: start;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(46px, 4.8vw, 68px);
+      line-height: 0.92;
+      color: var(--forest);
+    }
+    .script {
+      margin: 4px 0 0;
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(42px, 4.4vw, 60px);
+      line-height: 1;
+      color: var(--pink);
+    }
+    .sub { margin: 16px 0 0; }
+    .sub span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .sub strong {
+      display: block;
+      margin-top: 4px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(24px, 2.3vw, 30px);
+      line-height: 1.2;
+      color: var(--ink);
+    }
+    .lead { margin: 18px 0 0; }
+    .photo {
+      aspect-ratio: 4 / 5;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 76% 20%;
+    }
+
+    .statement {
+      width: min(1120px, calc(100% - 64px));
+      margin: 36px auto 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .statement h2 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(36px, 3.8vw, 52px);
+      line-height: 0.98;
+      color: var(--pink);
+    }
+    .columns {
+      display: grid;
+      gap: 16px;
+    }
+    .columns p { margin: 0; }
+
+    .health {
+      width: min(1120px, calc(100% - 64px));
+      margin: 36px auto 88px;
+      padding: 32px 28px 36px;
+      background: var(--panel);
+    }
+    .health h2 {
+      margin: 0 0 22px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(30px, 3.4vw, 44px);
+      line-height: 1.05;
+      color: var(--forest);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .cards article {
+      background: #fffdfb;
+      padding: 22px 22px 24px;
+      border-top: 3px solid var(--forest);
+    }
+    .cards h3 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.35;
+      color: var(--forest);
+    }
+    .cards p { margin: 0 0 8px; font-size: 15.5px; }
+    .cards p:last-child { margin: 0; }
+    .news { color: var(--pink); font-weight: 700; letter-spacing: 0.04em; }
+
+    @media (max-width: 860px) {
+      .open, .statement, .health { width: calc(100% - 36px); }
+      .open, .statement, .cards { grid-template-columns: 1fr; }
+      .photo { max-width: 520px; order: -1; }
+      .health { padding: 24px 16px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="chooser" aria-label="Design concepts">
+    <span>First half</span>
+    <a href="01-editorial.html">1</a>
+    <a href="02-studio.html">2</a>
+    <a href="03-journal.html">3</a>
+    <a href="04-portrait.html">4 Portrait</a>
+    <a href="05-spread.html" aria-current="page">5 Spread</a>
+    <a href="index.html">All</a>
+  </nav>
+
+  <header class="nav">
+    <a href="https://www.thrivewomenfitness.com/" aria-current="page">Home</a>
+    <a href="https://www.thrivewomenfitness.com/about">About</a>
+    <a href="https://www.thrivewomenfitness.com/women-s-hiking-retreats">Women's Hiking Retreats</a>
+    <a href="https://www.thrivewomenfitness.com/testimonials">Testimonials</a>
+    <a href="https://www.thrivewomenfitness.com/podcasts">Podcasts</a>
+    <a href="https://www.thrivewomenfitness.com/hike-retreat-photo-gallery">Photo Gallery</a>
+  </header>
+
+  <section class="open">
+    <div>
+      <h1>THRIVE Women Fitness</h1>
+      <p class="script">Shannon Peterson</p>
+      <p class="sub">
+        <span>Specialized coaching for</span>
+        <strong>Perimenopause thru Post-Menopause</strong>
+      </p>
+      <p class="lead">Hi! I'm Shannon, your perimenopause/post-menopausal Master Personal Trainer. For over 30 years, I've trained thousands of women just like you -- struggling with unwanted weight gain, fatigue, demotivation and loss of self-confidence that often starts in midlife and continues throughout the decades. And at age 54, I've personally experienced it. Women are told "that's just the way it is now", and lose hope. Wrong!</p>
+    </div>
+    <figure class="photo">
+      <img src="images/gym.jpg" alt="Shannon Peterson">
+    </figure>
+  </section>
+
+  <section class="statement">
+    <h2>THRIVING HAS NO AGE LIMIT</h2>
+    <div class="columns">
+      <p>I guarantee you CAN improve body composition, lose fat, build bone density, gain lean muscle, and feel more like you again! As a 3x Ironman World Championship finisher, I know it takes more than just a cookie cutter exercise program to get results. It takes scientifically proven strategic implementation designed to optimize your</p>
+      <p>THRIVE fitness clients learn a wholistic way of training, eating, and thinking to enhance your hormonal health.</p>
+    </div>
+  </section>
+
+  <section class="health">
+    <h2>EXERCISE: #1 impact on overall health</h2>
+    <div class="cards">
+      <article>
+        <h3>MUSCLE &amp; METABOLISM</h3>
+        <p>Women start losing muscle at age 30. By age 70, we have 35% less muscle.</p>
+        <p><span class="news">GOOD NEWS:</span> You can decrease muscle loss by 8% per decade. That increases metabolism &amp; gives you a leaner physique.</p>
+      </article>
+      <article>
+        <h3>BONE HEALTH</h3>
+        <p>Women start losing bone density at age 35. As much as 45% loss by age 85.</p>
+        <p><span class="news">GOOD NEWS:</span> Not only can you decrease future bone loss, you can still BUILD bone in menopause.</p>
+      </article>
+      <article>
+        <h3>DISEASE PREVENTION</h3>
+        <p>Heart Disease, Metabolic Disease &amp; Diabetes risk all go up after menopause.</p>
+        <p><span class="news">GOOD NEWS:</span> You can decrease risk of Cardiovascular Heart Disease by 40-70% &amp; Diabetes by 40%</p>
+      </article>
+      <article>
+        <h3>BRAIN HEALTH</h3>
+        <p>Depression, Brain Fog, and Irritability are all factors of hormonal changes.</p>
+        <p><span class="news">GOOD NEWS:</span> Brain-Body neural connections improve and so does your memory, mood, anxiety &amp; depression.</p>
+      </article>
+    </div>
+  </section>
+  <script>if (window.self !== window.top) document.documentElement.classList.add("framed");</script>
+  <style>.framed .chooser { display: none; }</style>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept 4 — Portrait | THRIVE Women Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1f1f1f;
+      --forest: #3e4a34;
+      --pink: #d81b60;
+      --cream: #fdf8f3;
+      --line: #e4ddd4;
+      --body: #2f2f2f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--body);
+      font-family: Montserrat, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.7;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; }
+
+    .chooser {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 8px 12px;
+      background: #141414;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+    }
+    .chooser span { opacity: 0.7; margin-right: 6px; }
+    .chooser a {
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+    .chooser a[aria-current="page"] { background: #fff; color: #141414; }
+    .chooser a:hover { background: rgba(255,255,255,0.14); }
+    .chooser a[aria-current="page"]:hover { background: #fff; }
+
+    .nav {
+      width: min(1120px, calc(100% - 64px));
+      margin: 0 auto;
+      padding: 22px 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .mark {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: var(--forest);
+    }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .nav-links a[aria-current="page"],
+    .nav-links a:hover { color: var(--pink); }
+
+    .hero {
+      width: min(1120px, calc(100% - 64px));
+      margin: 0 auto;
+      padding: 42px 0 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.72fr);
+      gap: 56px;
+      align-items: start;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(48px, 5vw, 72px);
+      line-height: 0.92;
+      color: var(--forest);
+    }
+    .script {
+      margin: 6px 0 0;
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(44px, 4.6vw, 64px);
+      line-height: 1;
+      color: var(--pink);
+    }
+    .sub { margin: 18px 0 0; }
+    .sub span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .sub strong {
+      display: block;
+      margin-top: 4px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(24px, 2.4vw, 30px);
+      line-height: 1.2;
+      color: var(--ink);
+    }
+    .lead { margin: 22px 0 0; max-width: 40rem; }
+    .story h2 {
+      margin: 32px 0 0;
+      max-width: 12em;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(34px, 3.4vw, 46px);
+      line-height: 1.05;
+      color: var(--pink);
+    }
+    .prose { margin-top: 16px; max-width: 40rem; }
+    .prose p { margin: 0 0 1em; }
+    .prose p:last-child { margin: 0; }
+
+    .frame {
+      position: sticky;
+      top: 24px;
+      aspect-ratio: 4 / 5;
+      margin: 6px 14px 18px 0;
+    }
+    .frame img {
+      position: relative;
+      z-index: 1;
+      object-position: 74% 24%;
+    }
+    .frame::after {
+      content: "";
+      position: absolute;
+      inset: 16px -12px -12px 16px;
+      border: 1px solid var(--pink);
+    }
+
+    .health {
+      width: min(1120px, calc(100% - 64px));
+      margin: 28px auto 88px;
+    }
+    .health h2 {
+      margin: 0 0 6px;
+      padding-top: 28px;
+      border-top: 1px solid var(--forest);
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(32px, 3.6vw, 46px);
+      line-height: 1.1;
+      color: var(--forest);
+    }
+    .rows article {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 28px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .rows h3 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 1.05;
+      color: var(--forest);
+    }
+    .rows p { margin: 0 0 8px; }
+    .rows p:last-child { margin: 0; }
+    .news {
+      color: var(--pink);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .nav, .hero, .health { width: calc(100% - 36px); }
+      .nav { flex-direction: column; align-items: flex-start; }
+      .hero { grid-template-columns: 1fr; gap: 22px; }
+      .frame {
+        position: static;
+        max-width: 460px;
+        order: -1;
+        margin: 0;
+      }
+      .rows article { grid-template-columns: 1fr; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="chooser" aria-label="Design concepts">
+    <span>First half</span>
+    <a href="01-editorial.html">1</a>
+    <a href="02-studio.html">2</a>
+    <a href="03-journal.html">3</a>
+    <a href="04-portrait.html" aria-current="page">4 Portrait</a>
+    <a href="05-spread.html">5 Spread</a>
+    <a href="index.html">All</a>
+  </nav>
+
+  <header class="nav">
+    <a class="mark" href="https://www.thrivewomenfitness.com/">THRIVE</a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="https://www.thrivewomenfitness.com/" aria-current="page">Home</a>
+      <a href="https://www.thrivewomenfitness.com/about">About</a>
+      <a href="https://www.thrivewomenfitness.com/women-s-hiking-retreats">Women's Hiking Retreats</a>
+      <a href="https://www.thrivewomenfitness.com/testimonials">Testimonials</a>
+      <a href="https://www.thrivewomenfitness.com/podcasts">Podcasts</a>
+      <a href="https://www.thrivewomenfitness.com/hike-retreat-photo-gallery">Photo Gallery</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="story">
+      <h1>THRIVE Women Fitness</h1>
+      <p class="script">Shannon Peterson</p>
+      <p class="sub">
+        <span>Specialized coaching for</span>
+        <strong>Perimenopause thru Post-Menopause</strong>
+      </p>
+      <p class="lead">Hi! I'm Shannon, your perimenopause/post-menopausal Master Personal Trainer. For over 30 years, I've trained thousands of women just like you -- struggling with unwanted weight gain, fatigue, demotivation and loss of self-confidence that often starts in midlife and continues throughout the decades. And at age 54, I've personally experienced it. Women are told "that's just the way it is now", and lose hope. Wrong!</p>
+      <h2>THRIVING HAS NO AGE LIMIT</h2>
+      <div class="prose">
+        <p>I guarantee you CAN improve body composition, lose fat, build bone density, gain lean muscle, and feel more like you again! As a 3x Ironman World Championship finisher, I know it takes more than just a cookie cutter exercise program to get results. It takes scientifically proven strategic implementation designed to optimize your</p>
+        <p>THRIVE fitness clients learn a wholistic way of training, eating, and thinking to enhance your hormonal health.</p>
+      </div>
+    </div>
+    <figure class="frame">
+      <img src="images/gym.jpg" alt="Shannon Peterson">
+    </figure>
+  </section>
+
+  <section class="health">
+    <h2>EXERCISE: #1 impact on overall health</h2>
+    <div class="rows">
+      <article>
+        <h3>MUSCLE &amp; METABOLISM</h3>
+        <div>
+          <p>Women start losing muscle at age 30. By age 70, we have 35% less muscle.</p>
+          <p><span class="news">GOOD NEWS:</span> You can decrease muscle loss by 8% per decade. That increases metabolism &amp; gives you a leaner physique.</p>
+        </div>
+      </article>
+      <article>
+        <h3>BONE HEALTH</h3>
+        <div>
+          <p>Women start losing bone density at age 35. As much as 45% loss by age 85.</p>
+          <p><span class="news">GOOD NEWS:</span> Not only can you decrease future bone loss, you can still BUILD bone in menopause.</p>
+        </div>
+      </article>
+      <article>
+        <h3>DISEASE PREVENTION</h3>
+        <div>
+          <p>Heart Disease, Metabolic Disease &amp; Diabetes risk all go up after menopause.</p>
+          <p><span class="news">GOOD NEWS:</span> You can decrease risk of Cardiovascular Heart Disease by 40-70% &amp; Diabetes by 40%</p>
+        </div>
+      </article>
+      <article>
+        <h3>BRAIN HEALTH</h3>
+        <div>
+          <p>Depression, Brain Fog, and Irritability are all factors of hormonal changes.</p>
+          <p><span class="news">GOOD NEWS:</span> Brain-Body neural connections improve and so does your memory, mood, anxiety &amp; depression.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <script>if (window.self !== window.top) document.documentElement.classList.add("framed");</script>
+  <style>.framed .chooser { display: none; }</style>
+</body>
+</html>
