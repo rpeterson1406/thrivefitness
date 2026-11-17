@@ -19,6 +19,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-size: 16.5px;
   line-height: 1.7;
+  overflow-x: clip;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
@@ -52,6 +53,44 @@ h1, h2, h3 { text-wrap: balance; }
   color: var(--forest);
   flex: none;
 }
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fffdfb;
+  color: var(--forest);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.nav-toggle-icon {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 12px;
+}
+.nav-toggle-icon span {
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+.nav-toggle-icon span:nth-child(1) { top: 0; }
+.nav-toggle-icon span:nth-child(2) { top: 5px; }
+.nav-toggle-icon span:nth-child(3) { top: 10px; }
+.nav.is-open .nav-toggle-icon span:nth-child(1) { top: 5px; transform: rotate(45deg); }
+.nav.is-open .nav-toggle-icon span:nth-child(2) { opacity: 0; }
+.nav.is-open .nav-toggle-icon span:nth-child(3) { top: 5px; transform: rotate(-45deg); }
 .nav-links {
   display: flex;
   align-items: center;
@@ -281,7 +320,7 @@ h1 {
   margin: 28px auto 8px;
 }
 .strip img { width: 100%; height: 200px; object-fit: cover; }
-.strip img.gym { object-position: 78% 22%; }
+.strip img.group { object-position: center 32%; }
 .quote .quote-mark { margin: 0 0 2px; }
 .quote .stars { margin: 0 0 8px; }
 .chips {
@@ -524,27 +563,103 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .nav, .hero, .wrap { width: calc(100% - 36px); }
-  .nav { flex-direction: column; align-items: flex-start; }
-  .nav-links { justify-content: flex-start; align-items: flex-start; }
-  .drop { flex-direction: column; align-items: flex-start; }
+  .nav, .hero, .wrap { width: calc(100% - 40px); }
   .hero, .split, .rows article, .reason, .offers, .prices, .gallery,
   .quote.has-photo, .strip, .podcasts {
     grid-template-columns: 1fr;
   }
+  .rows article, .reason { gap: 12px; }
   .frame {
-    position: static;
-    max-width: 460px;
-    order: -1;
-    margin: 0;
+    position: relative;
+    width: min(100%, 300px);
+    margin: 8px auto 0;
+    justify-self: center;
   }
+  .gallery img { height: 220px; }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 17px; }
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--cream);
+  }
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 6px 20px 20px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    max-height: calc(100dvh - 68px);
+    overflow-y: auto;
+  }
+  .nav.is-open .nav-links { display: flex; }
+  .nav-links > a,
+  .drop > a {
+    min-height: 44px;
+    padding: 12px 0;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+  .drop { flex-direction: column; align-items: stretch; width: 100%; }
   .menu {
     position: static;
     display: block;
     border: 0;
     background: transparent;
-    padding: 4px 0 8px 10px;
     min-width: 0;
+    padding: 0 0 8px 12px;
   }
-  .gallery img { height: 220px; }
+  .menu a {
+    min-height: 44px;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .hero {
+    width: calc(100% - 40px);
+    gap: 14px;
+    padding: 16px 0 8px;
+  }
+  .home-hero { display: flex; flex-direction: column; }
+  .home-hero .story { display: contents; }
+  .home-hero h1,
+  .home-hero .script { order: 1; width: 100%; }
+  .home-hero .frame { order: 2; }
+  .home-hero .sub,
+  .home-hero .lead { order: 3; width: 100%; }
+  h1 { font-size: clamp(34px, 9.2vw, 48px); }
+  .script { font-size: clamp(30px, 8vw, 42px); }
+  .sub strong,
+  .page-title { font-size: clamp(20px, 5.4vw, 28px); }
+  .pull { font-size: clamp(28px, 7vw, 38px); margin-top: 16px; }
+  .lead, .prose, .card p, .reason p, .rows p, .offer p { font-size: 17px; }
+  .home-hero .frame.shannon {
+    width: min(58vw, 300px);
+    margin: 4px auto;
+  }
+  .frame::after { inset: 10px -6px -6px 10px; }
+  .section { padding: 16px 0 6px; }
+  .section h2:not(.pull),
+  .block-title { padding-top: 16px; font-size: clamp(28px, 7vw, 40px); }
+  .chat {
+    min-height: 44px;
+    padding: 12px 18px;
+  }
+  .listen {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
 }

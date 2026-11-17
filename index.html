@@ -14,7 +14,11 @@
   <a class="skip" href="#main">Skip to Main Content</a>
   <header class="nav">
     <a class="mark" href="index.html">THRIVE</a>
-    <nav class="nav-links" aria-label="Site">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <nav class="nav-links" id="site-nav" aria-label="Site">
       <a href="index.html" aria-current="page">Home</a>
       <div class="drop">
         <a href="about.html">About</a>
@@ -36,7 +40,7 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero home-hero">
       <div class="story">
         <h1>THRIVE Women Fitness</h1>
         <p class="script">Shannon Peterson</p>
@@ -134,7 +138,7 @@
     </section>
 
     <div class="strip wrap">
-      <img class="gym" src="images/gym.jpg" alt="Shannon training with a cable">
+      <img class="group" src="images/group.jpg" alt="Women training together with medicine balls">
       <img src="images/plank.png" alt="Women training together on mats">
       <img src="images/gallery/12.jpg" alt="Women on a canyon hike">
     </div>
@@ -186,5 +190,6 @@
       </nav>
     </div>
   </footer>
+  <script src="js/nav.js"></script>
 </body>
 </html>

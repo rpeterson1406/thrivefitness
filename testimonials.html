@@ -13,7 +13,11 @@
   <a class="skip" href="#main">Skip to Main Content</a>
   <header class="nav">
     <a class="mark" href="index.html">THRIVE</a>
-    <nav class="nav-links" aria-label="Site">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <nav class="nav-links" id="site-nav" aria-label="Site">
       <a href="index.html">Home</a>
       <div class="drop">
         <a href="about.html">About</a>
@@ -99,5 +103,6 @@
       </nav>
     </div>
   </footer>
+  <script src="js/nav.js"></script>
 </body>
 </html>
