@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to Main Content</a>
   <header class="nav">
-    <a class="mark" href="index.html">THRIVE</a>
+    <a class="mark" href="index.html"><span>THRIVE</span><small>Women Fitness</small></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
       <span class="nav-toggle-text">Menu</span>
@@ -40,112 +40,149 @@
   </header>
 
   <main id="main">
-    <section class="hero home-hero">
+    <section class="hero">
+      <p class="ghost" aria-hidden="true">THRIVING</p>
       <div class="story">
         <h1>THRIVE Women Fitness</h1>
         <p class="script">Shannon Peterson</p>
+        <svg class="swoosh" viewBox="0 0 220 18" aria-hidden="true"><path d="M2 13 C 70 4, 150 4, 218 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <p class="sub">
-          <span>Specialized coaching for</span>
+          <span class="kicker">Specialized coaching for</span>
           <strong>Perimenopause thru Post-Menopause</strong>
         </p>
         <p class="lead">Hi! I'm Shannon, your perimenopause/post-menopausal Master Personal Trainer. For over 30 years, I've trained thousands of women just like you -- struggling with unwanted weight gain, fatigue, demotivation and loss of self-confidence that often starts in midlife and continues throughout the decades. And at age 54, I've personally experienced it. Women are told "that's just the way it is now", and lose hope. Wrong!</p>
+        <div class="actions">
+          <a class="btn fill" href="#train">Train with Me</a>
+          <a class="btn line" href="about.html">About</a>
+        </div>
       </div>
-      <figure class="frame shannon">
-        <img src="images/shannon.png" alt="Shannon Peterson">
+      <figure class="portrait">
+        <div class="frame">
+          <div class="photo">
+            <img src="images/shannon.png" alt="Shannon Peterson">
+          </div>
+          <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="56" fill="#fdf8f3" stroke="#3e4a34" stroke-width="1.2"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#3e4a34" stroke-width="0.6"/>
+            <path id="ring" d="M60,60 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" fill="none"/>
+            <text fill="#3e4a34" font-family="Montserrat, sans-serif" font-size="9" font-weight="600" letter-spacing="1.5">
+              <textPath href="#ring">THRIVING · NO AGE LIMIT · THRIVING · NO AGE LIMIT ·</textPath>
+            </text>
+            <path d="M60 46c2-6 8-8 8-8s-1 6-4 8c4 1 7 5 7 9 0 6-5 10-11 10s-11-4-11-10c0-4 3-8 7-9-3-2-4-8-4-8s6 2 8 8z" fill="none" stroke="#3e4a34" stroke-width="1.2"/>
+          </svg>
+        </div>
       </figure>
     </section>
 
-    <section class="band">
-      <div class="wrap">
-        <h2 class="pull">THRIVING HAS NO AGE LIMIT</h2>
-        <div class="prose">
-          <p>I guarantee you CAN improve body composition, lose fat, build bone density, gain lean muscle, and feel more like you again! As a 3x Ironman World Championship finisher, I know it takes more than just a cookie cutter exercise program to get results. It takes scientifically proven strategic implementation designed to optimize your</p>
-          <p>THRIVE fitness clients learn a wholistic way of training, eating, and thinking to enhance your hormonal health.</p>
+    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 62 C 260 18, 520 18, 760 58 S 1180 102, 1440 46" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+    </svg>
+
+    <section class="section wrap">
+      <h2 class="pull">THRIVING HAS NO AGE LIMIT</h2>
+      <svg class="center-swoosh" viewBox="0 0 160 14" aria-hidden="true"><path d="M2 10 C 40 3, 120 3, 158 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div class="prose">
+        <p>I guarantee you CAN improve body composition, lose fat, build bone density, gain lean muscle, and feel more like you again! As a 3x Ironman World Championship finisher, I know it takes more than just a cookie cutter exercise program to get results. It takes scientifically proven strategic implementation designed to optimize your</p>
+        <p>THRIVE fitness clients learn a wholistic way of training, eating, and thinking to enhance your hormonal health.</p>
+      </div>
+      <p class="eyebrow">EXERCISE: #1 impact on overall health</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M18 38C14 30 14 24 18 20c4-6 10-6 14-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M32 18h8a4 4 0 0 1 0 8h-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 24c4-4 8-4 12-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M16 30c6 4 12 4 16-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span class="tag">BUILD</span>
+          </div>
+          <h3>MUSCLE &amp; METABOLISM</h3>
+          <p>Women start losing muscle at age 30. By age 70, we have 35% less muscle.</p>
+          <p><span class="news">GOOD NEWS:</span> You can decrease muscle loss by 8% per decade. That increases metabolism &amp; gives you a leaner physique.</p>
+          <svg class="underline" viewBox="0 0 72 10" aria-hidden="true"><path d="M2 7 C 22 2, 50 2, 70 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 18a5 5 0 1 0-3 8 5 5 0 1 0 3 8h16a5 5 0 1 0 3-8 5 5 0 1 0-3-8H16z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span class="tag">PROTECT</span>
+          </div>
+          <h3>BONE HEALTH</h3>
+          <p>Women start losing bone density at age 35. As much as 45% loss by age 85.</p>
+          <p><span class="news">GOOD NEWS:</span> Not only can you decrease future bone loss, you can still BUILD bone in menopause.</p>
+          <svg class="underline" viewBox="0 0 72 10" aria-hidden="true"><path d="M2 7 C 22 2, 50 2, 70 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36.5S14.5 30.2 14.5 24a5.6 5.6 0 0 1 9.5-4 5.6 5.6 0 0 1 9.5 4c0 6.2-9.5 12.5-9.5 12.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17.5 24.2h3.1l1.5-3 2.3 5.6 1.7-2.6h4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="tag">SUPPORT</span>
+          </div>
+          <h3>DISEASE PREVENTION</h3>
+          <p>Heart Disease, Metabolic Disease &amp; Diabetes risk all go up after menopause.</p>
+          <p><span class="news">GOOD NEWS:</span> You can decrease risk of Cardiovascular Heart Disease by 40-70% &amp; Diabetes by 40%</p>
+          <svg class="underline" viewBox="0 0 72 10" aria-hidden="true"><path d="M2 7 C 22 2, 50 2, 70 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 14c-1.2 0-2.4.8-3 2-1.2-.8-2.8-1.1-4.2-.4-2.2 1.1-3.2 3.6-2.6 5.8-1.6.7-2.7 2.3-2.7 4.1 0 1.8 1 3.3 2.5 4 .1 2.2 1.4 4 3.3 4.8 1 .4 1.8 1.3 2.2 2.4H24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 14c1.2 0 2.4.8 3 2 1.2-.8 2.8-1.1 4.2-.4 2.2 1.1 3.2 3.6 2.6 5.8 1.6.7 2.7 2.3 2.7 4.1 0 1.8-1 3.3-2.5 4-.1 2.2-1.4 4-3.3 4.8-1 .4-1.8 1.3-2.2 2.4H24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 16v18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span class="tag">SHARPEN</span>
+          </div>
+          <h3>BRAIN HEALTH</h3>
+          <p>Depression, Brain Fog, and Irritability are all factors of hormonal changes.</p>
+          <p><span class="news">GOOD NEWS:</span> Brain-Body neural connections improve and so does your memory, mood, anxiety &amp; depression.</p>
+          <svg class="underline" viewBox="0 0 72 10" aria-hidden="true"><path d="M2 7 C 22 2, 50 2, 70 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </article>
+      </div>
+    </section>
+
+    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 36 C 280 92, 560 92, 820 48 S 1200 4, 1440 52" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+    </svg>
+
+    <section class="section wrap">
+      <div class="values">
+        <h2>Why working with me WORKS:</h2>
+        <figure class="shot">
+          <img src="images/plank.png" alt="Shannon coaching a client through a plank">
+        </figure>
+        <div class="reasons">
+          <article class="reason">
+            <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M4 14 C 18 7, 34 7, 46 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M39 7 L47.5 13.2 L38.5 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h3>RELATABLE.</h3>
+              <p>Having a trainer that "gets you" is key to your success. I've experienced the changes to my body &amp; mind that made me question my ability to feel vibrant, strong, and like myself again. I know first hand THRIVE Women Fitness works and it's worked for thousands of woman just like you.</p>
+            </div>
+          </article>
+          <article class="reason">
+            <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M4 14 C 18 7, 34 7, 46 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M39 7 L47.5 13.2 L38.5 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h3>SIMPLE.</h3>
+              <p>Train with me to take the guesswork out of working out. You don't necessarily need to train more, you just need to train smart.</p>
+            </div>
+          </article>
+          <article class="reason">
+            <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M4 14 C 18 7, 34 7, 46 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M39 7 L47.5 13.2 L38.5 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h3>PERSONALIZED.</h3>
+              <p>Personal training that is specifically adjusted to meet your needs, not cram you into a "one size fits all" routine.</p>
+            </div>
+          </article>
+          <article class="reason">
+            <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M4 14 C 18 7, 34 7, 46 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M39 7 L47.5 13.2 L38.5 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h3>FUN!</h3>
+              <p>When you love what you’re doing, you do more of it!</p>
+            </div>
+          </article>
+          <article class="reason">
+            <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M4 14 C 18 7, 34 7, 46 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M39 7 L47.5 13.2 L38.5 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h3>ACCOUNTABILITY.</h3>
+              <p>We are a team and I’m here for you 100% of the way during your sessions and beyond.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section wrap">
-      <h2>EXERCISE: #1 impact on overall health</h2>
-      <div class="rows">
-        <article>
-          <div class="topic">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M4 9v6M7 7v10M17 7v10M20 9v6M7 12h10"/></svg>
-            <h3>MUSCLE &amp; METABOLISM</h3>
-          </div>
-          <div>
-            <p>Women start losing muscle at age 30. By age 70, we have 35% less muscle.</p>
-            <p><span class="news">GOOD NEWS:</span> You can decrease muscle loss by 8% per decade. That increases metabolism &amp; gives you a leaner physique.</p>
-          </div>
-        </article>
-        <article>
-          <div class="topic">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M8.2 8.2a2.2 2.2 0 1 0-1.7 3.6 2.2 2.2 0 1 0 1.7 3.6h7.6a2.2 2.2 0 1 0 1.7-3.6 2.2 2.2 0 1 0-1.7-3.6H8.2z"/></svg>
-            <h3>BONE HEALTH</h3>
-          </div>
-          <div>
-            <p>Women start losing bone density at age 35. As much as 45% loss by age 85.</p>
-            <p><span class="news">GOOD NEWS:</span> Not only can you decrease future bone loss, you can still BUILD bone in menopause.</p>
-          </div>
-        </article>
-        <article>
-          <div class="topic">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 19s-6.5-4.1-6.5-8.4a3.6 3.6 0 0 1 6.5-1.9 3.6 3.6 0 0 1 6.5 1.9C18.5 14.9 12 19 12 19z"/></svg>
-            <h3>DISEASE PREVENTION</h3>
-          </div>
-          <div>
-            <p>Heart Disease, Metabolic Disease &amp; Diabetes risk all go up after menopause.</p>
-            <p><span class="news">GOOD NEWS:</span> You can decrease risk of Cardiovascular Heart Disease by 40-70% &amp; Diabetes by 40%</p>
-          </div>
-        </article>
-        <article>
-          <div class="topic">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 5.5c-1.6 0-2.6 1-2.6 2.2 0 .6.3 1.1.7 1.5-.8.3-1.6 1.1-1.6 2.3 0 1 .5 1.8 1.2 2.2-.2.4-.3.8-.3 1.3 0 1.8 1.4 3 3.1 3h.2c1.6 0 2.8-1.1 2.8-2.7 0-.5-.1-.9-.4-1.3.8-.4 1.4-1.2 1.4-2.3 0-1.1-.7-2-1.6-2.3.5-.4.8-.9.8-1.6 0-1.3-1.1-2.3-2.7-2.3H12z"/></svg>
-            <h3>BRAIN HEALTH</h3>
-          </div>
-          <div>
-            <p>Depression, Brain Fog, and Irritability are all factors of hormonal changes.</p>
-            <p><span class="news">GOOD NEWS:</span> Brain-Body neural connections improve and so does your memory, mood, anxiety &amp; depression.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section wrap">
-      <h2>Why working with me WORKS:</h2>
-      <div class="rows checks">
-        <article>
-          <h3><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>RELATABLE.</h3>
-          <p>Having a trainer that "gets you" is key to your success. I've experienced the changes to my body &amp; mind that made me question my ability to feel vibrant, strong, and like myself again. I know first hand THRIVE Women Fitness works and it's worked for thousands of woman just like you.</p>
-        </article>
-        <article>
-          <h3><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>SIMPLE.</h3>
-          <p>Train with me to take the guesswork out of working out. You don't necessarily need to train more, you just need to train smart.</p>
-        </article>
-        <article>
-          <h3><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>PERSONALIZED.</h3>
-          <p>Personal training that is specifically adjusted to meet your needs, not cram you into a "one size fits all" routine.</p>
-        </article>
-        <article>
-          <h3><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>FUN!</h3>
-          <p>When you love what you’re doing, you do more of it!</p>
-        </article>
-        <article>
-          <h3><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>ACCOUNTABILITY.</h3>
-          <p>We are a team and I’m here for you 100% of the way during your sessions and beyond.</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="strip wrap">
-      <img class="group" src="images/group.jpg" alt="Women training together with medicine balls">
-      <img src="images/plank.png" alt="Women training together on mats">
-      <img src="images/gallery/12.jpg" alt="Women on a canyon hike">
-    </div>
-
-    <section class="band">
-      <div class="section wrap">
+    <section class="section wrap" id="train">
       <p class="pull">MUSCLE: Most important determinant of healthy longevity</p>
+      <svg class="center-swoosh" viewBox="0 0 160 14" aria-hidden="true"><path d="M2 10 C 40 3, 120 3, 158 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       <h2>Train with Me</h2>
       <div class="offers">
         <article class="offer">
@@ -172,6 +209,11 @@
           <p>This can be done as a solo session or groups up to 5 people.</p>
         </article>
       </div>
+    </section>
+
+    <section class="chat-band">
+      <div class="wrap">
+        <a class="chat" href="mailto:thrivewomenfitness@gmail.com?subject=I%27d%20like%20to%20THRIVE%20again!">I want to schedule a free chat!</a>
       </div>
     </section>
   </main>
@@ -179,9 +221,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <a class="mark" href="index.html">THRIVE</a>
+        <a class="mark" href="index.html"><span>THRIVE</span><small>Women Fitness</small></a>
         <p class="fine">THRIVE Women Fitness</p>
-        <p class="fine">Version 2</p>
+        <p class="fine">Version 3</p>
       </div>
       <nav class="social" aria-label="Social">
         <a href="https://www.facebook.com/LiveYourTruthCompany">Facebook</a>
