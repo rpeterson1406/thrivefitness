@@ -425,8 +425,18 @@ h2 {
 .offer {
   background: var(--paper);
   border-top: 3px solid var(--forest);
-  padding: 22px;
+  padding: 0 22px 22px;
+  overflow: hidden;
   transition: transform 0.22s ease;
+}
+.offer-media { margin: 0 -22px 14px; }
+.offer-media img,
+.offer-media video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #efeae4;
+  display: block;
 }
 .offer:hover { transform: translateY(-3px); }
 .offer .icon { width: 28px; height: 28px; margin-bottom: 8px; }
