@@ -10,6 +10,7 @@ const skip = new Set([
   'package-lock.json',
   'vite.config.js',
   'vite.entry.js',
+  'wix-saved',
 ])
 
 export default defineConfig({
